@@ -3,7 +3,7 @@ var express    = require('express'),
     port       = 8080,
     bodyParser = require('body-parser'),
     recipeCtrl = require('./api/controllers/recipeCtrl'),
-    mongoose   = require('mongoose'),
+    batchCtrl  = require('./api/controllers/batchCtrl'),
     mongoose   = require('mongoose');
 
 app
@@ -11,7 +11,8 @@ app
     .use(express.static(__dirname + '/public/public'))
 
     .get('/recipes', recipeCtrl.getCommunityRecipes)
-    .get('/totalRecipes', recipeCtrl.getRecipeTotals);
+    .get('/totalRecipes', recipeCtrl.getRecipeTotals)
+    .get('/ingredients',  batchCtrl.getAll);
 
 mongoose
     .set('debug', true)
