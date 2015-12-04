@@ -6,6 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "jshintConfig": {
+    "esnext": true
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -15,6 +24,11 @@
     "react-dom": "^0.14.2"
   },
   "devDependencies": {
+    "babel": "^6.3.13",
+    "babel-core": "^6.3.13",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "source-map": "^0.5.3",
     "webpack": "^1.12.2"
   }
 }

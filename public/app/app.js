@@ -1,16 +1,12 @@
-var React    = require('react'),
-    reactDOM = require('react-dom'),
-    $        = require('jquery'),
-    HomeRightAside = require('./home/homeRightAside'),
-    HomeLeftAside  = require('./home/homeLeftAside'),
+import React    from 'react';
+import reactDOM from 'react-dom';
+import Home     from './home/home';
+import $        from 'jquery';
 
-    App = React.createClass({
+let App = React.createClass({
         render: function() {
             return (
-                <div>
-                    <HomeLeftAside />
-                    <HomeRightAside />
-                </div>
+                <Home />
             );
         }
     });

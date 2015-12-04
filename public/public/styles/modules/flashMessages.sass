@@ -1,0 +1,36 @@
+$base-spacing: 1.5em !default
+$alert-color: #fff6bf !default
+$error-color: #fbe3e4 !default
+$notice-color: #e5edf8 !default
+$success-color: #e6efc2 !default
+
+@mixin flash($color)
+  background-color: $color
+  color: darken($color, 60%)
+  margin: 0 auto
+  margin-top: $base-spacing / 2
+  margin-bottom: $base-spacing / 2
+  padding: $base-spacing / 2
+  text-align: center
+  +halfSecondTransition(all)
+  &.newBatchFlash
+    width: 100%
+    position: absolute
+    opacity: 0
+    top: -30px
+    &.active
+      transition: all 400ms ease-in-out
+      opacity: 1
+      top: 48px
+
+.flash-alert
+  +flash($alert-color)
+
+.flash-error
+  +flash($error-color)
+
+.flash-notice
+  +flash($notice-color)
+
+.flash-success
+  +flash($success-color)

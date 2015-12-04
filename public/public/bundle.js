@@ -52,42 +52,129 @@
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var React = __webpack_require__(2),
-	    reactDOM = __webpack_require__(159),
+	'use strict';
 
-	    Navbar = React.createClass({displayName: "Navbar",
-	        render: function() {
-	            return (
-	                React.createElement("header", {role: "banner", className: "navigation"}, 
-	                  React.createElement("div", {className: "navigation-wrapper"}, 
-	                  React.createElement("a", {className: "logo"}, 
-	                      React.createElement("span", {className: "octicon octicon-beer"}), 
-	                  React.createElement("span", {className: "name"}, " Grain Billd ")), 
-	                  React.createElement("a", {id: "js-mobile-menu", className: "navigation-menu-button"}, "Menu"), 
-	                    React.createElement("nav", {role: "navigation"}, 
-	                      React.createElement("ul", {id: "js-navigation-menu", className: "navigation-menu show"}, 
-	                        React.createElement("li", {className: "nav-link"}, React.createElement("a", null, "Home")), 
-	                        React.createElement("li", {className: "nav-link"}, React.createElement("a", null, "New Batch")), 
-	                        React.createElement("li", {className: "nav-link"}, React.createElement("a", null, "Ingredient Info")), 
-	                        React.createElement("li", {className: "nav-link more"}, React.createElement("a", null, "Recipes"), 
-	                          React.createElement("ul", {className: "submenu"}, 
-	                            React.createElement("li", null, React.createElement("a", null, "My Recipes")), 
-	                            React.createElement("li", null, React.createElement("a", null, "Community Recipes"))
-	                          )
-	                        ), 
-	                        React.createElement("li", {className: "nav-link logout"}, React.createElement("a", null, "Log Out"), 
-	                        React.createElement("a", null, "Log In")
-	                        )
-	                      )
-	                    )
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(159);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Navbar = _react2.default.createClass({
+	  displayName: 'Navbar',
+
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'header',
+	      { role: 'banner', className: 'navigation' },
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'navigation-wrapper' },
+	        _react2.default.createElement(
+	          'a',
+	          { href: 'home', className: 'logo' },
+	          _react2.default.createElement('span', { className: 'octicon octicon-beer' }),
+	          _react2.default.createElement(
+	            'span',
+	            { className: 'name' },
+	            '  Grain Billd'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'a',
+	          { id: 'js-mobile-menu', className: 'navigation-menu-button' },
+	          'Menu'
+	        ),
+	        _react2.default.createElement(
+	          'nav',
+	          { role: 'navigation' },
+	          _react2.default.createElement(
+	            'ul',
+	            { id: 'js-navigation-menu', className: 'navigation-menu show' },
+	            _react2.default.createElement(
+	              'li',
+	              { className: 'nav-link' },
+	              _react2.default.createElement(
+	                'a',
+	                null,
+	                'Home'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'li',
+	              { className: 'nav-link' },
+	              _react2.default.createElement(
+	                'a',
+	                null,
+	                'New Batch'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'li',
+	              { className: 'nav-link' },
+	              _react2.default.createElement(
+	                'a',
+	                null,
+	                'Ingredient Info'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'li',
+	              { className: 'nav-link more' },
+	              _react2.default.createElement(
+	                'a',
+	                null,
+	                'Recipes'
+	              ),
+	              _react2.default.createElement(
+	                'ul',
+	                { className: 'submenu' },
+	                _react2.default.createElement(
+	                  'li',
+	                  null,
+	                  _react2.default.createElement(
+	                    'a',
+	                    null,
+	                    'My Recipes'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  null,
+	                  _react2.default.createElement(
+	                    'a',
+	                    null,
+	                    'Community Recipes'
 	                  )
 	                )
-	            );
-	        }
-	    });
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'li',
+	              { className: 'nav-link logout' },
+	              _react2.default.createElement(
+	                'a',
+	                null,
+	                'Log Out'
+	              ),
+	              _react2.default.createElement(
+	                'a',
+	                null,
+	                'Log In'
+	              )
+	            )
+	          )
+	        )
+	      )
+	    );
+	  }
+	});
 
-	reactDOM.render(React.createElement(Navbar, null), document.getElementById('nav'));
-
+	_reactDom2.default.render(_react2.default.createElement(Navbar, null), document.getElementById('nav'));
 
 /***/ },
 /* 2 */
@@ -139,6 +226,7 @@
 	});
 
 	React.__SECRET_DOM_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = ReactDOM;
+	React.__SECRET_DOM_SERVER_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = ReactDOMServer;
 
 	module.exports = React;
 
@@ -10489,6 +10577,7 @@
 	    multiple: MUST_USE_PROPERTY | HAS_BOOLEAN_VALUE,
 	    muted: MUST_USE_PROPERTY | HAS_BOOLEAN_VALUE,
 	    name: null,
+	    nonce: MUST_USE_ATTRIBUTE,
 	    noValidate: HAS_BOOLEAN_VALUE,
 	    open: HAS_BOOLEAN_VALUE,
 	    optimum: null,
@@ -10500,6 +10589,7 @@
 	    readOnly: MUST_USE_PROPERTY | HAS_BOOLEAN_VALUE,
 	    rel: null,
 	    required: HAS_BOOLEAN_VALUE,
+	    reversed: HAS_BOOLEAN_VALUE,
 	    role: MUST_USE_ATTRIBUTE,
 	    rows: MUST_USE_ATTRIBUTE | HAS_POSITIVE_NUMERIC_VALUE,
 	    rowSpan: null,
@@ -18702,7 +18792,7 @@
 
 	'use strict';
 
-	module.exports = '0.14.2';
+	module.exports = '0.14.3';
 
 /***/ },
 /* 148 */
@@ -19677,28 +19767,149 @@
 /* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var React    = __webpack_require__(2),
-	    reactDOM = __webpack_require__(159),
-	    $        = __webpack_require__(161),
-	    HomeRightAside = __webpack_require__(162),
-	    HomeLeftAside  = __webpack_require__(163),
+	'use strict';
 
-	    App = React.createClass({displayName: "App",
-	        render: function() {
-	            return (
-	                React.createElement("div", null, 
-	                    React.createElement(HomeLeftAside, null), 
-	                    React.createElement(HomeRightAside, null)
-	                )
-	            );
-	        }
-	    });
+	var _react = __webpack_require__(2);
 
-	reactDOM.render(React.createElement(App, null), document.getElementById('app'));
+	var _react2 = _interopRequireDefault(_react);
 
+	var _reactDom = __webpack_require__(159);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _home = __webpack_require__(161);
+
+	var _home2 = _interopRequireDefault(_home);
+
+	var _jquery = __webpack_require__(163);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var App = _react2.default.createClass({
+	    displayName: 'App',
+
+	    render: function render() {
+	        return _react2.default.createElement(_home2.default, null);
+	    }
+	});
+
+	_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('app'));
 
 /***/ },
 /* 161 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _homeLeftAside = __webpack_require__(162);
+
+	var _homeLeftAside2 = _interopRequireDefault(_homeLeftAside);
+
+	var _homeRightAside = __webpack_require__(164);
+
+	var _homeRightAside2 = _interopRequireDefault(_homeRightAside);
+
+	var _jquery = __webpack_require__(163);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Home = _react2.default.createClass({
+	    displayName: 'Home',
+	    getInitialState: function getInitialState() {
+	        return {
+	            recipes: [],
+	            totalRecipes: 'Loading',
+	            totalCommunity: 'Loading'
+	        };
+	    },
+	    componentDidMount: function componentDidMount() {
+	        _jquery2.default.get('http://localhost:8080/recipes', (function (resp) {
+	            if (this.isMounted()) {
+	                this.setState({ recipes: this.state.recipes.concat(resp) });
+	            }
+	        }).bind(this));
+	        _jquery2.default.get('http://localhost:8080/totalRecipes', (function (resp) {
+	            if (this.isMounted()) {
+	                this.setState({ totalRecipes: resp.totalCount, totalCommunity: resp.totalCommunity });
+	            }
+	        }).bind(this));
+	    },
+	    render: function render() {
+	        var recipeArray = 'Loading latest recipes';
+	        recipeArray = this.state.recipes.map((function (item, index) {
+	            return _react2.default.createElement(
+	                'p',
+	                { key: index },
+	                ' ',
+	                item.name,
+	                ' '
+	            );
+	        }).bind(this));
+	        return _react2.default.createElement(
+	            'div',
+	            { className: 'container' },
+	            _react2.default.createElement(
+	                'h1',
+	                null,
+	                'Welcome to Grain Billd 2!'
+	            ),
+	            _react2.default.createElement(_homeLeftAside2.default, { totalRecipes: this.state.totalRecipes, totalCommunity: this.state.totalCommunity }),
+	            _react2.default.createElement(_homeRightAside2.default, { recipes: recipeArray })
+	        );
+	    }
+	});
+	module.exports = Home;
+
+/***/ },
+/* 162 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _jquery = __webpack_require__(163);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var HomeLeftAside = _react2.default.createClass({
+	    displayName: 'HomeLeftAside',
+	    render: function render() {
+	        return _react2.default.createElement(
+	            'div',
+	            { className: 'data' },
+	            _react2.default.createElement(
+	                'p',
+	                null,
+	                this.props.totalRecipes,
+	                ' total recipes!'
+	            ),
+	            _react2.default.createElement(
+	                'p',
+	                null,
+	                this.props.totalCommunity,
+	                ' total community recipes!'
+	            )
+	        );
+	    }
+	});
+
+	module.exports = HomeLeftAside;
+
+/***/ },
+/* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -28914,73 +29125,42 @@
 
 
 /***/ },
-/* 162 */
+/* 164 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var React = __webpack_require__(2),
-	    $     = __webpack_require__(161),
+	'use strict';
 
-	    HomeAside = React.createClass({displayName: "HomeAside",
-	        getInitialState: function() {
-	            return {
-	                recipes: []
-	            };
-	        },
-	        componentDidMount: function() {
-	            $.get('http://localhost:8080/recipes', function(resp) {
-	                this.setState({ recipes: this.state.recipes.concat(resp) });
-	            }.bind(this));
-	        },
-	        render: function() {
-	            var recipeArray = 'Loading latest recipes';
-	            recipeArray = this.state.recipes.map(function(item, index) {
-	                return ( React.createElement("p", {key:  index }, " ",  item.name, " ") );
-	            }.bind(this));
-	            return (
-	                React.createElement("div", {className: "container"}, 
-	                    React.createElement("aside", {className: "right"}, 
-	                      React.createElement("header", null, 
-	                        React.createElement("p", null, "Latest community recipes")
-	                      ), 
-	                           recipeArray 
-	                    )
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _jquery = __webpack_require__(163);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var HomeAside = _react2.default.createClass({
+	    displayName: 'HomeAside',
+	    render: function render() {
+	        return _react2.default.createElement(
+	            'aside',
+	            { className: 'right' },
+	            _react2.default.createElement(
+	                'header',
+	                null,
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Latest community recipes'
 	                )
-	            );
-	        }
-	    });
+	            ),
+	            this.props.recipes
+	        );
+	    }
+	});
 
 	module.exports = HomeAside;
-
-
-/***/ },
-/* 163 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var React = __webpack_require__(2),
-	    $     = __webpack_require__(161),
-
-	    HomeLeftAside = React.createClass({displayName: "HomeLeftAside",
-	        getInitialState: function() {
-	            return {
-	                totalRecipes: 'Loading',
-	                totalCommunity: 'Loading'
-	            };
-	        },
-	        componentDidMount: function() {
-	            $.get('http://localhost:8080/totalRecipes', function(resp) {
-	                this.setState({ totalRecipes: resp.totalCount, totalCommunity: resp.totalCommunity });
-	            }.bind(this));
-	        },
-	        render: function() {
-	            return ( React.createElement("div", {className: "data"}, 
-	                        React.createElement("p", null, "Total recipes: ",  this.state.totalRecipes), 
-	                        React.createElement("p", null, "Total community recipes: ",  this.state.totalCommunity)
-	                    ) );
-	        }
-	    });
-
-	module.exports = HomeLeftAside;
-
 
 /***/ }
 /******/ ]);

@@ -1,14 +1,15 @@
-var React = require('react'),
-    reactDOM = require('react-dom'),
+import React from 'react';
+import reactDOM from 'react-dom';
 
-    Navbar = React.createClass({
+let Navbar = React.createClass({
         render: function() {
             return (
                 <header role="banner" className="navigation">
-                  <div className="navigation-wrapper">
-                  <a className="logo">
-                      <span className="octicon octicon-beer"></span>
-                  <span className="name"> Grain Billd </span></a>
+                    <div className="navigation-wrapper">
+                        <a href="home" className="logo">
+                            <span className="octicon octicon-beer"></span>
+                            <span className="name">  Grain Billd</span>
+                        </a>
                   <a id="js-mobile-menu" className="navigation-menu-button">Menu</a>
                     <nav role="navigation">
                       <ul id="js-navigation-menu" className="navigation-menu show">

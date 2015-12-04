@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     concat = require('gulp-cssimport'),
     plumber = require('gulp-plumber'),
     watch   = require('gulp-watch'),
-    paths   = { sass: ['public/public/**/*.sass'] };
+    paths   = { sass: ['public/public/**/*.sass', 'public/public/**/*.scss'] };
 
 gulp.task('sass', function(done) {
     gulp.src('public/public/styles/main.sass')

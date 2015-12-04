@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "jshintConfig": {
+      "esnext": true
+  },
   "dependencies": {
     "body-parser": "^1.14.1",
     "compression": "^1.6.0",
